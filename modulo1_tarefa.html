@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html body {
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 300;
+            font-stretch: normal;
+            font-size: 18px;
+            line-height: 24px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color:  #003245;
+            line-height: 24px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+        }
+
+        .codigoFonte{
+            background-color:#679BB7;
+            font-size:.9em;
+            margin:10px 0;
+            padding: 10px;
+        }
+
+        header{
+            font-size: 1em;
+            padding: 10px 0;
+            text-align: center;
+            background-color: black;
+            color:#CDCDCD;
+            margin: 0 0 10px;
+        }
+        .contenedor{
+            background-color: white;
+            width: 50%;
+            margin: 0 auto;
+            padding: 10px;
+
+        }
+        footer{
+            border-top: steelblue solid 1px;
+            font-size: 0.7em;
+            margin:15px 0;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <header>Secciones y líneas generales de un documento HTML5</header>
+    
+
+    <div class="contenedor">
+
+    <section>
+        <h1>Secciones y líneas generales de un documento HTML5</h1>
+        <p>La especificación HTML5 trae muchos nuevos elementos a los desarrolladores web, permitiéndoles describir la estructura de un documento web con semántica estandarizada. Este documento describe estos elementos y cómo usarlos para definir el perfil de cualquier documento.</p>
+    </section>
+    <section>
+        <h3>Problemas resueltos por HTML5</h3>
+        <p>La definición de la estructura de un documento en HTML 4 y su algoritmo de perfilado es muy tosco y genera numerosos problemas:</p>
+        <ol>
+            <li>HTML5 quita la necesidad de elementos <strong>&lt;div&gt;</strong> para definir secciones semánticas sin definir valores específicos para los atributos class, introduciendo un nuevo elemento, <strong>&lt;section&gt;</strong>, el elemento de sección HTML.</li>
+            <li>Mezclar varios documentos es difícil: la inclusión de un sub-documento en un documento principal. Esto se resuelve en HTML5 con los elementos de seccionado (<strong>&lt;article&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;nav&gt;</strong> y <strong>&lt;aside&gt;</strong>) son siempre subsecciones de su sección ancestra más cercana.</li>
+            <li>HTML5 introduce el elemento <strong>&lt;hgroup&gt;</strong> que oculta todos los elementos de cabecera excepto el primero de más alto rango (por ejemplo, <strong>&lt;hgroup&gt;</strong><strong>&lt;h1&gt;</strong>Justine<strong>&lt;/h1&gt;</strong><strong>&lt;h2&gt;</strong>Les Malheurs de la Vertu<strong>&lt;/h2&gt;</strong><strong>&lt;/hgroup&gt;</strong> crea el perfil 1. Justine).</li>
+            <li>Un documento puede tener secciones especiales conteniendo información relacionado que no es parte del flujo principal. HTML5 introduce el elemento <strong>&lt;aside&gt;</strong> permitiendo a dichas secciones no ser parte del perfil principal.</li>
+            <li>Hay información relacionada no al documento pero si al sitio entero, como logos, menús, tablas de contenidos, o información de derechos de autor y notas legales. Para ese propósito, HTML5 introduce tres elementos de sección específicos: <strong>&lt;nav&gt;</strong> para colecciones de enlaces, como una tabla de contenidos, <strong>&lt;footer&gt;</strong> y <strong>&lt;header&gt;</strong> información relacionada con el sitio.</li>
+        </ol>
+        <p>De manera más general, HTML5 trae precisión a las características de seccionado y cabecera, permitiendo a los perfiles de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.</p>
+    </section>
+    <section>
+        <h3>El algoritmo de perfilado de HTML5</h3>
+        <h4>Definiendo secciones en HTML5</h4>
+        <p>Todo el contenido incluido dentro del elemento <strong>&lt;body&gt;</strong> es parte de una sección. Las secciones en HTML5 pueden ser anidadas. Además de la sección principal, definida por el elemento <strong>&lt;body&gt;</strong>, los límites de la sección son definidos explícita o implícitamente. La secciones definidas explícitamente son el contenido definido en las etiquetas <strong>&lt;body&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;aside&gt;</strong>, <strong>&lt;footer&gt;</strong>, <strong>&lt;header&gt;</strong>, y <strong>&lt;nav&gt;</strong>. Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una sección anidada puede tener un elemento <strong>&lt;h1&gt;</strong>. Consulte también Definiendo cabeceras en HTML5.</p>
+
+        <h4>Ejemplo:</h4>
+
+        <div class="codigoFonte">
+        &lt;section&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Forest elephants&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Introduction&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;In this section, we discuss the lesser known forest elephants.&lt;/p&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Habitat&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Forest elephants do not live in trees but among them.&lt;/p&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;aside&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;advertising block&lt;/p&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/aside&gt;<br>
+        &lt;/section&gt;<br>
+        &lt;footer&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;p&gt;(c) 2010 The Example company&lt;/p&gt;<br>
+        &lt;/footer&gt;<br>
+    </div>
+    </section>
+    </div>
+
+    <footer>Miríadax - html5mooc - by Alejandro Fuente</footer>
+</body>
+</html>
