@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Herencia</title>
+<style>
+    body div header h1{ color:blue; }        /* Estilo de Linea: 0   - ID(#): 0  - Clase(.): 0  - Elementos: 4 -  */
+    div header h1{ color:red; }              /* Estilo de Linea: 0   - ID(#): 0  - Clase(.): 0  - Elementos: 3 -  */
+    header h1{ color:green; }                /* Estilo de Linea: 0   - ID(#): 0  - Clase(.): 0  - Elementos: 2 -  */
+    h1{ color: darkgray; }                   /* Estilo de Linea: 0   - ID(#): 0  - Clase(.): 0  - Elementos: 1 -  */
+    #caja .cabecera h1{ color: chocolate; }  /* Estilo de Linea: 0   - ID(#): 1  - Clase(.): 1  - Elementos: 1 - APLICA CON MAYOR VALOR */
+    header.cabecera h1{ color:darkred }      /* Estilo de Linea: 0   - ID(#): 0  - Clase(.): 1  - Elementos: 2 -  */
+</style>
+</head>
+<body>
+<div id="caja">
+ <header class="cabecera">
+    <h1>Cabecera: header</h1>
+</header>
+</div>
+</body>
+</html>
