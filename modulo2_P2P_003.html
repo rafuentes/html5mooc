@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Modulo 2 - CSS</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif
+    }
+    @font-face {
+        font-family: 'Roboto';
+        src: url('/media/fonts/roboto/Roboto-Regular-webfont.eot');
+        src: url('/media/fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        color: black
+    }
+    img {display: block; margin: 0 auto;}
+    video{width:426px;height:240px;display: block; margin: 0 auto;}
+    .header{
+        display: flex;
+        align-items: center;
+        background-color: #CDCDCD;
+        height: 80px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        
+    }
+</style>
+</head>
+<body>
+    <div  class="header">P2P modulo 2 - Responsive, Video and svg</div>
+    
+
+    <article>
+        <header>Image responsive</header>
+        <picture>
+            <source 
+                srcset="images/image650x300.jpg" 
+                media="(min-width: 650px)" >
+            <source 
+                srcset="images/image465x300.jpg"  
+                media="(min-width: 465px)">
+            <img    
+                srcset="images/image330x300.jpg" 
+                alt="Default">
+        </picture>
+    </article>
+<article>
+
+</article>
+    <header>Video Youtube</header>
+    <video>
+        <source src="https://youtube.be/op0bhZNUJFE" type="video/mp4">
+    </video>
+</section>
+
+</article>
+    <header>Imagem SVG</header>
+    <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red"/>
+     </svg>
+</section>
+
+
+</body>
+</html>
