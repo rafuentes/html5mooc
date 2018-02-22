@@ -12,7 +12,8 @@
     body{
         padding: 0;
         margin: 0;
-        font-family: 'Roboto', Arial, Helvetica, sans-serif
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        background-color: #CDCDCD;
     }
     @font-face {
         font-family: 'Roboto';
@@ -27,21 +28,29 @@
     }
     img {display: block; margin: 0 auto;}
     video{width:426px;height:240px;display: block; margin: 0 auto;}
+    article header{
+        background-color: #eeeeee;
+        margin: 10px 0 10px;
+    }
     .header{
         display: flex;
         align-items: center;
-        background-color: #CDCDCD;
+        background-color: #009688;
         height: 80px;
-        margin-bottom: 10px;
         padding-left: 10px;
         
+    }
+    .container{
+        margin: 0 50px;
+        background-color:#FFF;
+        padding: 0 10px 0 10px;
     }
 </style>
 </head>
 <body>
     <div  class="header">P2P modulo 2 - Responsive, Video and svg</div>
     
-
+<div class="container">
     <article>
         <header>Image responsive</header>
         <picture>
@@ -56,22 +65,18 @@
                 alt="Default">
         </picture>
     </article>
-<article>
-
-</article>
-    <header>Video Youtube</header>
-    <video>
-        <source src="https://youtube.be/op0bhZNUJFE" type="video/mp4">
-    </video>
-</section>
-
-</article>
-    <header>Imagem SVG</header>
-    <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red"/>
-     </svg>
-</section>
-
-
+    <article>
+            <header>Video Youtube</header>
+            <video>
+                <source src="https://youtube.be/op0bhZNUJFE" type="video/mp4">
+            </video>
+    </article>
+    <article>
+            <header>Imagem SVG</header>
+            <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red"/>
+            </svg>
+    </article>
+</div>
 </body>
 </html>
