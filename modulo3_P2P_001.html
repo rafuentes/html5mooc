@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="h1"></h1>
+        <h2 id="autor"></h1>
+        <h2 id="h2">La fecha y la hora son:</h2>
+        <div id="fecha"></div>
+        <div id="contenido"><ul id="lista"></ul></div>
+      
+       <script type="text/javascript">
+        var fecha = new Date();
+        var msj;
+        var autor = "Alejandro Fuentes";
+      
+        if      (fecha.getHours() < 7)  { msj = "Buenas noches";}
+        else if (fecha.getHours() < 12) { msj = "Buenos días";}
+        else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+        else                                          { msj = "Buenas noches";}
+      
+        document.getElementById("h1").innerHTML    = msj;
+        document.getElementById("fecha").innerHTML = fecha;
+        document.getElementById("autor").innerHTML = autor;
+
+        var lista = document.getElementById("lista");
+
+        var _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("H2: " + document.getElementById("h2").innerHTML);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+        _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("H1: " + document.getElementById("h1").innerHTML);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+        _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("location.href: " + location.href);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+        _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("location: " + location);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+        _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("screen.height: " + screen.height);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+        _li = document.createElement("li");
+        var itemNuevo = document.createTextNode("screen.width: " + screen.width);
+        _li.appendChild(itemNuevo);
+        lista.appendChild(_li);
+
+
+      </script>
+</body>
+</html>
