@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Página personal de Alejandro Fuentes</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    }
+    body > header{
+        background: #b1eca5;
+        padding: 20px 0 10px 20px;
+    }
+    ul{
+        padding-left:0;
+    }
+    li{
+        list-style: none;
+        display: inline;
+        padding-right: 10px;
+    }
+
+    
+    @font-face {
+        font-family: 'Roboto';
+        src: url('/media/fonts/roboto/Roboto-Regular-webfont.eot');
+        src: url('/media/fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+            url('/media/fonts/roboto/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        color: black
+    }
+    img {display: block; margin: 0 auto;}
+    video{width:426px;height:240px;display: block; margin: 0 auto;}
+    article{
+        margin: 3px;
+    }
+    article header{
+        background-color: #eeeeee;
+        padding: 5px 0 10px 10px;
+        margin: 10px 0 10px;
+        color: rgb(85, 78, 78);
+    }
+    .header{
+        /* display: flex; */
+        align-items: center;
+        background-color: #009688;
+        height: 80px;
+        padding: 20px 0 10px 20px;
+        
+    }
+    .boxMain{
+        background-color: #CDCDCD;
+    }
+    .contenedor{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap:wrap;
+        flex-wrap: wrap;
+        padding: 20px 0 10px 20px;
+        
+    }
+    .vertical{
+        padding: 3px;
+        width: 300px;
+        height: 400px;
+    }
+    .horizontal{
+        padding: 3px;
+        width: 300px;
+        height: 196;
+    }
+    .contenedorBordeRadioSupDer{
+        margin: 10px;
+        padding: 0 10px 0 10px;
+        border: 3px solid #666;
+        border-top-right-radius: 20px;
+    }
+    .fondoDegradadoCeleste{
+        background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h2>Página personal de Alejandro Fuentes</h2>
+        <nav>
+            <li><a href="#imagenesResponsivas">Ejemplo de imagen responsivas.</a></li>
+            <li><a href="#video">Ejemplo de video.</a></li>
+            <li><a href="#imagenVectorial">Ejemplo de imagen Vectorial</a></li>
+            <li><a href="#caracterEspecial">Ejemplo de caracter especial.</a></li>
+        </nav>
+    </header>
+    <div  class="header fondoDegradadoCeleste">
+        <div>Vamos a ver algunos conceptos vistos hasta el módulo 2 HTML5 mooc.</div>
+    </div>
+    
+<div class="contenedor">
+
+    <article id="ImagenesResponsivas">
+        <header>Image responsive</header>
+        <picture>
+            <source 
+                srcset="images/image650x300.jpg" 
+                media="(min-width: 650px)" >
+            <source 
+                srcset="images/image465x300.jpg"  
+                media="(min-width: 465px)">
+            <img    
+                srcset="images/image330x300.jpg" 
+                alt="Default">
+        </picture>
+    </article>
+    <article id="video">
+        <div class="contenedorBordeRadioSupDer">
+            <header>10 inventos incríbles para automóviles:</header>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CtMbahUqkH4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </article>
+    <article id="imagenVectorial">
+            <header>Imagem SVG</header>
+            <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180" fill="red"/>
+            </svg>
+    </article>
+    <article id="caracterEspecial">
+            <header>Caracteres Especiales</header>
+            <strong>traduciones</strong>
+            <p>Como estas: ingles- How are you, Frances - Ça va. <br>pingüino: ingles - penguin, Frances - pingouin </p>
+    </article>
+</div>
+<footer>
+    Atividad obligatorio html5mooc - modulo 2
+</footer>
+</body>
+</html>
+<!--
+1. Ok
+Uso de colores para texto y fondo, incluyendo al menos colores degradados en alguna de sus cajas.
+2. Ok
+Inclusión de tipografías externas de Google Fonts, Adobe Edge Web Fonts o un servicio similar on line.
+3. Ok
+Distintos encabezados.
+4. Ok
+Uso de caracteres especiales
+5. Ok
+Incluir, imágenes de tipo bitmap y vectorial.
+6. Ok
+Incluir algún vídeo.
+7. Ok
+Incluir bordes redondeados en alguna de sus cajas.
+8. Ok
+La página debe comenzar con el siguiente encabezamiento:  “Página personal de <nombre y apellido del alumno>”
+
+-->
