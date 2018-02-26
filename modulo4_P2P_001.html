@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        var num, acc = 0, op = "";
+      
+        function mas()   { acc = num.value;  op = "+"; }
+        function menos() { acc = num.value;  op = "-"; }
+        function por() { acc = num.value;  op = "*"; }
+        function div() { acc = num.value;  op = "/"; }
+        function elevado() { acc = num.value;  op = "ele"; }
+        function quadrado()     { 
+            num.value = num.value * num.value;  
+            acc = num.value; 
+        }
+        function inverso()      { 
+            num.value = isNaNorInfiniteRetornaCero(1 / num.value);
+            acc = num.value; 
+        }
+        function raizdos()      { 
+            num.value = isNaNorInfiniteRetornaCero(Math.sqrt(num.value)); 
+            acc = num.value; 
+        }
+        function parteentera()  { 
+            num.value = isNaNorInfiniteRetornaCero((num.value >= 0) ? Math.floor(num.value) : Math.ceil(num.value));
+            acc = num.value;
+        }
+
+        function isNaNorInfiniteRetornaCero(value){
+            return (isNaN(value) || !isFinite(value)) ? 0 : value; 
+        }
+      
+
+        function calcular() {
+          if (op === "+") {num.value = (+acc + +num.value)}
+          if (op === "-") {num.value = (+acc - +num.value)}
+          if (op === "*") {num.value = (+acc * +num.value)}
+          if (op === "/") {num.value = (+acc / +num.value)}
+          if (op === "ele") {num.value = (Math.pow(+acc, +num.value))}
+        }
+      
+        function inic ()   {num = document.getElementById("num");}
+        function vaciar () {num.value = "";}  
+      </script>
+</head>
+<body onLoad="inic()">
+    <header>Buenos días, bienvenido a la calculadora de Alejandro Fuentes</header>
+    <div>
+        <p>Número: <input type="text" size="12" id="num" onClick="vaciar()"></p>
+        <fieldset><legend>Operadores unitários</legend>
+            <button onClick="quadrado()">x^2</button>
+            <button onClick="inverso()">1/x</button>
+            <button onClick="raizdos()">Raiz quadrada de x</button>
+            <button onClick="parteentera()">Parte entera  de x</button>
+        </fieldset>
+        <fieldset><legend>Operadores binários</legend>
+                <button onClick="mas()">+</button>
+                <button onClick="menos()">-</button>
+                <button onClick="por()">*</button>
+                <button onClick="div()">/</button>
+                <button onClick="elevado()">x^y</button>
+                <button onClick="calcular()">=</button>
+            </fieldset>
+                
+    </div>     
+</body>
+</html>
