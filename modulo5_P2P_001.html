@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Calculadora</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #53706d;
+        }
+        header{
+            /* display: flex; */
+            align-items: center;
+            background-color: #009688;
+            height: 80px;
+            padding: 20px 0 10px 20px;
+        }
+        .contenedor{
+            margin: 0 auto;
+            width: 800px;
+            padding: 20px 0 10px 20px;
+            background-color: #fff;
+        }
+        fieldset{
+            padding: 20px 0 30px 20px;
+            margin: 20px 10px;
+            border-radius: 0 20px;
+        }
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+            var numA = 0;
+            var acc = 0;
+            var op = "";
+        
+
+        $(function() {
+
+
+
+            $("#n1").on("click", 
+                function(){ 
+                    $("#n1").val("");
+                }
+            );
+
+            $("#b1").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(num.val() * num.val());
+                }
+            );
+            $("#b2").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(isNaNorInfiniteRetornaCero(1 / num.val()));
+                }
+            );
+            $("#b3").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(isNaNorInfiniteRetornaCero(Math.sqrt(num.val()))); 
+                }
+            );
+            $("#b4").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(isNaNorInfiniteRetornaCero((num.val() >= 0) ? Math.floor(num.val()) : Math.ceil(num.val())));
+                }
+            );
+            $("#b5").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(isNaNorInfiniteRetornaCero(Math.pow(2, num.val())));
+                }
+            );
+            $("#b6").on("click", 
+                function() {
+                    var num = $("#n1");
+                    num.val(isNaNorInfiniteRetornaCero(factorial(num.val())));
+                }
+            );
+
+            $("#mas").on("click",
+                function() {
+                    var num = $("#n1");
+                    numA = num.val();
+                    op = "+";
+                }
+            );
+            $("#menos").on("click",
+                function() {
+                    var num = $("#n1");
+                    numA = num.val();
+                    op = "-";
+                }
+            );
+            $("#por").on("click",
+                function() {
+                    var num = $("#n1");
+                    numA = num.val();
+                    op = "*";
+                }
+            );
+            $("#div").on("click",
+                function() {
+                    var num = $("#n1");
+                    numA = num.val();
+                    op = "/";
+                }
+            );
+            $("#elevado").on("click",
+                function() {
+                    var num = $("#n1");
+                    numA = num.val();
+                    op = "^";
+                }
+            );
+            $("#resultado").on("click",
+                function() {
+                    var num = $("#n1");
+
+                    if (op === "+") {num.val(+numA + +num.val())}
+                    if (op === "-") {num.val(+numA - +num.val())}
+                    if (op === "*") {num.val(+numA * +num.val())}
+                    if (op === "/") {num.val(+numA / +num.val())}
+                    if (op === "^") {num.val(Math.pow(+numA, +num.val()))}
+                }
+            );
+
+        });
+
+        function isNaNorInfiniteRetornaCero(value){
+            return (isNaN(value) || !isFinite(value)) ? 0 : value; 
+        }
+
+        function factorial(value){
+            if(value === 0){
+                return 1;
+            }
+            else{
+                return value * factorial(--value);
+            }
+        }
+      
+      </script>
+</head>
+<body>
+    <header>Buenos días, bienvenido a la calculadora de Alejandro Fuentes</header>
+    <div class="contenedor">
+        
+        Número: <input type="text" id="n1">
+          
+        <fieldset>
+            <legend>Operadores unitários</legend>
+            <button id="b1"> x<sup>2</sup> </button>
+            <button id="b2"> 1/x </button>
+            <button id="b3"> sqrt(x) </button>
+            <button id="b4"> parte.entera(x) </button>
+            <button id="b5"> 2<sup>x</sup> </button>
+            <button id="b6"> x! </button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Operadores binários</legend>
+            <button id="mas">+</button>
+            <button id="menos">-</button>
+            <button id="por">*</button>
+            <button id="div">/</button>
+            <button id="elevado">x^y</button>
+            <button id="resultado">=</button>
+        </fieldset>
+
+    </div>     
+</body>
+</html>
