@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="css/jquery-ui.min.css" rel="Stylesheet" />
+    <link type="text/css" href="css/calculadora.css" rel="Stylesheet" />
+    <style type="text/css">
+        .carousel-inner .item img,
+        .carousel-inner .item img               { width: 100%;}
+        .container .carousel-indicators .active { background-color:orange;}
+        .container .carousel-indicators li      { border: 1px solid orange;}
+        .container .panel-footer                { margin-top:20px;}
+    </style>
+
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/calculadora.js" ></script>
+
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar navbar-inverse ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a class="navbar-brand" href="10-index.html">MOOC</a>
+            </div>
+            <div class="collapse navbar-collapse" id="miMenu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="10-index.html">INICIO</a></li>
+                <li><a href="10-ejercicio_puzzle.html">PUZZLE</a></li>
+                <li><a href="modulo5_P2P_001.html">CALCULADORA</a></li> 
+                <li><a href="#">Opción 4</a></li> 
+                <li><a href="#">Opción 5</a></li> 
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h2>Buenos días, bienvenido a la calculadora de Alejandro Fuentes</h2>
+    </header>
+
+        
+        Número: <input type="text" id="n1"><br>
+        Memoria: <div class="flotante"><span id="mem" class="badge badge-secondary">empty</span></div>
+        
+        <fieldset>
+            <legend>Operadores unitários</legend>
+            <button id="b1"> x<sup>2</sup> </button>
+            <button id="b2"> 1/x </button>
+            <button id="b3"> sqrt(x) </button>
+            <button id="b4"> parte.entera(x) </button>
+            <button id="b5"> 2<sup>x</sup> </button>
+            <button id="b6"> x! </button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Operadores binários</legend>
+            <button id="mas">+</button>
+            <button id="menos">-</button>
+            <button id="por">*</button>
+            <button id="div">/</button>
+            <button id="elevado">x^y</button>
+            <button id="resultado">=</button>
+        </fieldset>
+
+        <fieldset>
+                <legend>Operadores n-nários</legend>
+                <p>Separar numero por <strong>coma</strong> solamente.</p>
+                <button id="sumatoria">sumatorio(x)</button>
+                <button id="producto">Producto(x)</button>
+                <button id="toM">GrabarM (x -> M)</button>
+                <button id="fromM">LeerM (x <- M)</button>
+        </fieldset>
+
+    </div>
+</body>
+</html>
