@@ -134,6 +134,32 @@
                 }
             );
 
+            $("#sumatoria").on("click",
+                function () {
+                    var num = $("#n1");
+                    var x = 0;
+                    var a = num.val().split(',');
+
+                    for (var i = 0; i < a.length; i += 1) {
+                        x += (+a[i]);
+                    }
+                    num.val(x);
+                    oper = undefined;
+                }
+            );
+            $("#producto").on("click",
+                function() {
+                    var num = $("#n1");
+                    var x = 1;
+                    var a = num.val().split(',');
+                    for (i = 0; i < a.length; i += 1) {
+                        x = x * (+a[i]);
+                    }
+                    num.val(x);
+                    oper = undefined;
+                }
+            );
+
         });
 
         function isNaNorInfiniteRetornaCero(value){
@@ -176,6 +202,13 @@
             <button id="elevado">x^y</button>
             <button id="resultado">=</button>
         </fieldset>
+
+        <fieldset>
+                <legend>Operadores n-nários</legend>
+                <p>Separar numero por <strong>coma</strong> solamente.</p>
+                <button id="sumatoria">sumatorio(x)</button>
+                <button id="producto">Producto(x)</button>
+            </fieldset>
 
     </div>     
 </body>
